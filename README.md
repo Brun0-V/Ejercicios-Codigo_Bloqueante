@@ -162,7 +162,7 @@ void setup() {
 void loop() {
   if (digitalRead(pulsadorPin) == LOW) {
     modoNocturno = !modoNocturno;
-    delay(500); // Retardo para evitar rebotes del pulsador
+    delay(500); // Delay para evitar bounce del pulsador
   }
   switch (estado) {
     case ROJO:
@@ -201,7 +201,7 @@ void loop() {
   if (modoNocturno && estado == AMARILLO) {
     for (int ciclos = 0; ciclos < 10; ciclos++) {
       digitalWrite(LedA, !digitalRead(LedA));
-      delay(1000);
+      delay(500);
     }
   }
 }
@@ -212,10 +212,10 @@ void loop() {
 #define ON 1
 #define OFF 0
 
+#define pulsadorPin 2
 #define LedR 3
 #define LedA 4
 #define LedV 5
-#define pulsadorPin 2
 
 #define tiempoRojo 5000
 #define tiempoAmarillo 2000
@@ -279,7 +279,7 @@ void loop() {
 void nightMode(){
   for (int ciclos = 0; ciclos < 10; ciclos++) {
       digitalWrite(LedA, !digitalRead(LedA));
-      delay(1000);
+      delay(500);
     }
 }
 ```
@@ -289,10 +289,10 @@ void nightMode(){
 #define ON 1
 #define OFF 0
 
+#define pulsadorPin 2
 #define LedR 3
 #define LedA 4
 #define LedV 5
-#define pulsadorPin 2
 
 #define tiempoRojo 5000
 #define tiempoAmarillo 2000
@@ -321,7 +321,6 @@ void setup() {
 void loop() {
   switch (estado) {
     case ROJO:
-      Serial.println("ROJO");
       do
       {
         digitalWrite(LedR, ON);
@@ -333,7 +332,6 @@ void loop() {
       break;
 
     case ROJO_AMARILLO:
-      Serial.println("ROJO-AMARILLO");
       do
       {
         digitalWrite(LedR, ON);
@@ -345,7 +343,6 @@ void loop() {
       break;
 
     case VERDE:
-      Serial.println("VERDE");
       do
       {
         digitalWrite(LedR, OFF);
@@ -357,7 +354,6 @@ void loop() {
       break;
 
     case AMARILLO:
-      Serial.println("AMARILLO");
       do
       {
         digitalWrite(LedR, OFF);
@@ -371,12 +367,21 @@ void loop() {
 }
 
 void nightMode(){
-  Serial.println("BLINK");
   for (int ciclos = 0; ciclos < 10; ciclos++) {
       digitalWrite(LedA, !digitalRead(LedA));
-      delay(1000);
+      delay(500);
     }
 }
 ```
 
 *Entregar un PDF con los 3 códigos, junto a sus enunciados y adjuntar las conclusiones que crea pertinente a las diferentes problemáticas y soluciones.*
+
+## Conclusiones:
+
+En mi opinión, los ejercicios presentados son muy útiles y proporcionan una introducción práctica a nuevas funciones y formas de resolver problemas con Arduino. Me gustó la forma en que los ejercicios fueron estructurados, comenzando con la creación de balizas con LEDs de diferentes colores y luego avanzando hacia la implementación de semáforos, yendo de más simple a más complejo.
+
+En particular, me pareció interesante el uso de la función millis() en algunos de los ejercicios. Esta función permite un control más preciso del tiempo y evita problemas de sincronización al utilizar delays.
+
+Sin embargo, me gustaría ver más ejercicios que presenten desafíos adicionales. Aunque los ejercicios actuales son buenos para comenzar, me gustaría tener la oportunidad de aplicar los conceptos aprendidos en problemas más complejos o proyectos prácticos.
+
+En general, los ejercicios son una excelente manera de adquirir conocimientos básicos. Sin embargo, agregar más desafíos y proyectos prácticos podría enriquecer aún más la experiencia de aprendizaje.
