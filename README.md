@@ -1,4 +1,6 @@
 ## Ejercicios - Código bloqueante y no bloqueante
+<link rel="stylesheet" href="mdss-screen.min.css" media="screen">
+
 
 **Realizar los siguientes ejercicios:**
 
@@ -36,6 +38,7 @@ void loop() {
   delay(125);
 }
 ```
+<div class="page"/>
 
 **[Ejercicio 1.2](Ejercicios/EJ-1_2.cpp):** Realiza una baliza con 2 LEDs de colores diferentes. El primero debe titilar 3 vez por segundo mientras que el segundo debe titilar 4 veces por segundo.
 ```cpp
@@ -85,6 +88,7 @@ void loop() {
   var++;
 }
 ```
+<div class="page"/>
 
 **[Ejercicio 1.3](Ejercicios/EJ-1_3.cpp):** Investigar la función millis() del framework Arduino y utilizarla para volver a implementar el ejercicio anterior.
 ```cpp
@@ -125,6 +129,7 @@ void loop() {
   }
 }
 ```
+<div class="page"/>
 
 ***PARTE 2:***
 
@@ -206,6 +211,7 @@ void loop() {
   }
 }
 ```
+<div class="page"/>
 
 **[Ejercicio 2.2](Ejercicios/EJ-2_2.cpp):** Realiza un semáforo (rojo -> rojo y amarillo -> verde -> amarillo) con modo nocturno (con un pulsador se accederá al modo nocturno que consiste en que cuando se presione el semáforo titilará en amarillo cada 2 segundos). Es obligatorio que el cambio de estado se inmediato.
 ```cpp
@@ -283,6 +289,7 @@ void nightMode(){
     }
 }
 ```
+<div class="page"/>
 
 **[Ejercicio 2.3](Ejercicios/EJ-2_3.cpp):** Utiliza la función millis() para volver a implementar el ejercicio anterior.
 ```cpp
@@ -375,6 +382,7 @@ void nightMode(){
 ```
 
 *Entregar un PDF con los 3 códigos, junto a sus enunciados y adjuntar las conclusiones que crea pertinente a las diferentes problemáticas y soluciones.*
+<div class="page"/>
 
 ## Conclusiones:
 
