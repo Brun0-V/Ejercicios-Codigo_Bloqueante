@@ -86,7 +86,7 @@ void loop() {
 void nightMode(){
   Serial.println("BLINK");
   for (int ciclos = 0; ciclos < 10; ciclos++) {
-      digitalWrite(LedA, !digitalRead(LedA));
-      delay(1000);
-    }
+    digitalWrite(LedA, !digitalRead(LedA));
+    delay(1000);
+  }
 }
